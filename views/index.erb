@@ -3,10 +3,10 @@
 <a href="/words/new">Add a New Word</a>
 
 
+<h3>See list of all words here:</h3>
 
-
-<!-- Displaying inputted tasks -->
-
-  <h3>See list of all words here:</h3>
-
-  <h4><%= @words %></h4>
+<ul>
+  <% @words.each() do |word| %>
+    <li><a href="/word_details/<%= word.id() %>"><%= word.definition() %></a></li>
+  <% end %>
+</ul>
