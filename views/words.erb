@@ -1,18 +1,4 @@
 <h1>All Words</h1>
 <h3>Here are your words: </h3>
 
-
-
-
-
-
-  <ul><% if (@words != nil) %>
-          <% @words.each() do |word| %>
-            <li><%= word.description() %></li>
-              <ul>
-                <li>contact.phone </li>
-                <li>contact.email </li>
-              </ul>
-          <% end %>
-        <% end %>
-    </ul>
+<h4><%= @words %></h4>
