@@ -3,6 +3,7 @@ class Definition
 
   define_method(:initialize) do |definitions|
     @definitions = definitions
+    @id = @@definitions.length().+(1)
   end
 
   define_method(:definitions) do
