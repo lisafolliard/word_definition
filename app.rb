@@ -10,10 +10,10 @@ get('/') do
   erb(:index)
 end
 
-# get('/words') do
-#   @words = Word.all()
-#   erb(:words)
-# end
+get('/words') do
+  @words = Word.all()
+  erb(:words)
+end
 
 get('/words/new') do
   erb(:word_form)
@@ -21,6 +21,7 @@ end
 
 post('/words') do
   @word = params.fetch("word")
-  # @words = Word.all()
+  #might comment the below
+  @words = Word.all()
   erb(:success)
 end

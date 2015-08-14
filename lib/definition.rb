@@ -1,10 +1,10 @@
 class Definition
 
-  define_method(:initialize) do |definition|
-    @definition = definition
+  define_method(:initialize) do |definitions|
+    @definitions = definitions
   end
 
-  define_method(:definition) do
-    @definition
+  define_method(:definitions) do
+    @definitions
   end
 end

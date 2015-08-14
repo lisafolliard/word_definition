@@ -2,10 +2,17 @@
 <h3>Here are your words: </h3>
 
 
-    
 
-  <ul>
-  <% @words.each() do |word| %>
-  <li><a href="/words/<%= word.id() %>"><%= word.word() %></a></li>
-  <% end %>
-  </ul>
+
+
+
+  <ul><% if (@words != nil) %>
+          <% @words.each() do |word| %>
+            <li><%= word.description() %></li>
+              <ul>
+                <li>contact.phone </li>
+                <li>contact.email </li>
+              </ul>
+          <% end %>
+        <% end %>
+    </ul>
