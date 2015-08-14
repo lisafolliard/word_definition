@@ -3,6 +3,13 @@ require('definition')
 
   describe('Definition') do
 
+
+
+
+
+
+
+
     describe('#definition') do
       it('returns the definition of a word') do
         new_definition = Definition.new("a trip or journey in a car")
@@ -11,4 +18,3 @@ require('definition')
       end
     end
   end
- 

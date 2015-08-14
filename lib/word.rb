@@ -5,7 +5,7 @@ class Word
   end
 
   define_method(:definition) do
-    @definition  
+    @definition
   end
-
+  
 end
