@@ -26,14 +26,10 @@ post('/') do
   erb(:success)
 end
 
-# post('/word_detail') do
-
 post('/success2') do
-
   definition = params.fetch("definition")
-  @new_definition = Definition.new(definition)
-  @new_definition.save()
-
+  @new_definition = definition
+  Definition.new(definition).save()
   @word = Word.find(params.fetch('add_definition_id').to_i())
   @word.add_definition(@new_definition)
   erb(:success2)
