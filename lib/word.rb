@@ -1,11 +1,11 @@
 class Word
 
-  define_method(:initialize) do |definition|
-    @definition = definition
+  define_method(:initialize) do |word|
+    @word = word
   end
 
-  define_method(:definition) do
-    @definition
+  define_method(:word) do
+    @word
   end
-  
+
 end
