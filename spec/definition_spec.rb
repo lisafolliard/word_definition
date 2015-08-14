@@ -33,4 +33,21 @@ require('definition')
       end
     end
 
+    describe("id") do
+      it('returns the definition id') do
+        new_definition = Definition.new("sweet dessert")
+        new_definition.save()
+        expect(new_definition.id()).to(eq(1))
+      end
+    end
+
+    describe(".find") do
+      it("returns a definition by its id number") do
+        new_definition = Definition.new("sweet dessert")
+        new_definition.save()
+        new_definition2 = Definition.new("green shoes")
+        new_definition2.save()
+        expect(Definition.find(new_definition.id())).to(eq(new_definition))
+      end
+    end
   end

@@ -10,6 +10,10 @@ class Definition
     @definitions
   end
 
+  define_method(:id) do
+    @id
+  end
+
   define_method(:save) do
     @@definitions.push(self)
   end
@@ -20,6 +24,16 @@ class Definition
 
   define_singleton_method(:clear) do
     @@definitions = []
+  end
+
+  define_singleton_method(:find) do |identification|
+    new_definition = nil
+    @@definitions.each() do |definition|
+      if definition.id().eql?(identification.to_i())
+        new_definition = definition
+      end
+    end
+    new_definition
   end
 
 end
