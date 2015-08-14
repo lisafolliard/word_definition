@@ -7,11 +7,11 @@ describe('Word') do
     Word.clear()
   end
 
-  describe('#word') do
-    it('lets you add a new word') do
-      new_word = Word.new("cruise")
+  describe('#definition') do
+    it('lets you add a new definition') do
+      new_word = Word.new("cruise around")
       new_word.save()
-      expect(new_word.word()).to(eq("cruise"))
+      expect(new_word.definition()).to(eq("cruise around"))
     end
   end
 

@@ -6,12 +6,14 @@ require('./lib/definition')
 require('pry')
 
 get('/') do
+  @words = Word.all()
   erb(:index)
 end
 
-get('/words') do
-  @@words = Word.all()
-end
+# get('/words') do
+#   @words = Word.all()
+#   erb(:words)
+# end
 
 get('/words/new') do
   erb(:word_form)
@@ -19,5 +21,6 @@ end
 
 post('/words') do
   @word = params.fetch("word")
+  # @words = Word.all()
   erb(:success)
 end
