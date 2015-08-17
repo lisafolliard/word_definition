@@ -1,18 +1,18 @@
 class Word
   @@words = []
 
-  define_method(:initialize) do |definition|
-    @definition = definition
+  define_method(:initialize) do |word|
+    @word = word # changed to make variable reflect what it's holding
     @id = @@words.length().+(1)
-    @words = []
+    @definitions = [] # changed to make variable reflect what it's holding
   end
 
-  define_method(:definition) do
-    @definition
+  define_method(:word) do
+    @word
   end
 
   define_method(:add_definition) do |definition|
-    @words.push(definition)
+    @definitions.push(definition)
   end
 
   define_method(:save) do
@@ -23,8 +23,8 @@ class Word
     @id
   end
 
-  define_method(:words) do
-    @words
+  define_method(:definitions) do
+    @definitions
   end
 
   define_singleton_method(:all) do

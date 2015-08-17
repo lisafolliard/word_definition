@@ -28,8 +28,7 @@ end
 
 post('/success2') do
   definition = params.fetch("definition")
-  @new_definition = definition
-  Definition.new(definition).save()
+  @new_definition = Definition.new(definition) # changed so can then add actual Definition object, not String!
   @word = Word.find(params.fetch('add_definition_id').to_i())
   @word.add_definition(@new_definition)
   erb(:success2)
